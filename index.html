@@ -5,14 +5,43 @@
   <meta charset="UTF-8" />
   <title>About Iva</title>
   <style> /* general style */
-    html, body {
+    html {
+    /* Adjust base font size using clamp:
+       - Minimum: 16px (good for small screens)
+       - Preferred: 2vw (scales with the viewport width)
+       - Maximum: 22px (prevents the font from becoming too large on wide screens) */
+    font-size: clamp(16px, 2vw, 22px);
+}
+
+body {
     margin: 0;
     padding: 0;
-    width: 100vw; 
-    height: 100vh;
-    overflow: hidden; 
+    width: 100vw;
+    height: 100vh; /* Corrected from 100vw to 100vh for body height */
+    overflow: hidden;
     font-family: "Segoe UI", Arial, sans-serif;
+}
+
+@media (max-width: 1200px) {
+    html {
+        /* Increase the scaling factor and maximum size for larger screens */
+        font-size: clamp(18px, 2.8vw, 24px); /* Larger minimum and maximum values */
     }
+}
+
+@media (max-width: 768px) {
+    html {
+        /* Further increase for medium screens, typical for tablets */
+        font-size: clamp(18px, 3.5vw, 24px); /* Larger preferred size */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        /* Maximum increase for small screens, typical for mobile devices */
+        font-size: clamp(18px, 5vw, 24px); /* Significantly larger preferred size for very small screens */
+    }
+}
   </style>
   <link rel="stylesheet" href="background/background.css">
   <link rel="stylesheet" href="background/background-changer.css">

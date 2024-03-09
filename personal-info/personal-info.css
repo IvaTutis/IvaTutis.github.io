@@ -18,34 +18,67 @@
     display: flex; 
     flex-direction: column;
     justify-content: space-between;
-    }
+    align-items: center;
+}
 
-    .personal-info {
-        text-align: center;
-        margin: 0 0 2%;
-    }
+.personal-info {
+    text-align: center; 
+    margin: 0 0 2%;
+    width: 100%; 
+}
 
+.personal-info h2 {
+    color: #4A4A48; 
+}
+
+.personal-info p {
+    margin: 0 0 2%; 
+    text-align: left;
+}
+
+.personal-links {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%;
+}
+
+.personal-info a {
+    text-decoration: none; 
+    color: #4A4A48; 
+    margin: 5px 0; 
+}
+
+.personal-info a:hover {
+    color: #00be53; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #info {
+        width: 90%; 
+        padding: 5%; 
+        top: 2%;
+        transform: translate(-50%, -50%);
+        font-size: 1.2rem; 
+    }
+    
     .personal-info h2 {
-        color: #4A4A48;
+        font-size: 2rem; 
     }
 
     .personal-info p {
-        text-align:start;
-        margin: 0 0 2%;
+        text-align: center;
+        font-size: 5rem; 
+    }
+    
+    .personal-info a {
+        font-size: 1.25rem;
+        margin: 10px 0; 
     }
 
     .personal-links {
-        display: flex; 
-        flex-direction: column; 
-        align-items:center; 
-        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
-
-    .personal-info a {
-        text-decoration: none; 
-        color: #4A4A48; 
-    }
-
-    .personal-info a:hover {
-        color: #00be53; /* Darker shade for hover state, adjust as needed */
-    }
+}
