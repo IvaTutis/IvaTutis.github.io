@@ -2,37 +2,112 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Modern Web Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>About Iva</title>
+  <link rel="stylesheet" href="background/background.css">
+  <link rel="stylesheet" href="background/background-changer.css">
+  <link rel="stylesheet" href="background/range-slider.css">
+  <link rel="stylesheet" href="personal-info/personal-info.css">
+  <style>
+    #toggleToolbox {
+      position: fixed;
+        z-index: 3;
+        top: 20px;
+        left: 20px;
+        border: 1px solid #d4d7d6; /* Updated for clarity */
+        border-radius: 8px; /* Rounded corners */
+        background-color: #e6e6e6; /* Modern, flat design typically uses solid colors */
+        color: #333333; /* Dark gray for contrast */
+        padding: 2px 8px; /* Spacing inside the button */
+        cursor: pointer; /* Cursor changes to a hand icon when hovered */
+        font-size: 16px; /* Larger, more readable text */
+        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    #toggleToolbox:hover {
+        background-color: #f0f0f0; /* Slightly darker when hovered for feedback */
+    }
+
+    .toolbox-visible {
+        transform: translateX(140%);
+    }
+
+    #toolbox {
+        /* size */ 
+        width: 20%;
+        height: auto;
+        /* position when hidden */
+        position: fixed;
+        left: -30%; 
+        top: 2%;
+        transition: transform 1s cubic-bezier(0.42, 0, 0.58, 1);
+        /* shape & colour */
+        background-color: rgba(241, 242, 235, 0.8);
+        color: #566246;
+        padding: 1rem;
+        border-radius: 12px;
+    }
+  </style>
 </head>
 
 <body>
-    <nav id="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About me</a>
-        <a href="#contact">Contact info</a>
-        <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round"></div>
-            </label>
-            <em>Enable Dark Mode!</em>
-        </div>
-    </nav>
 
-    <div class="content-square">
-        <main id="home">
-            <! -- js injects text -->
-        </main>
-    </div>
+  <!-- relating to customizable background animation -->
+  <div id="scene"></div>
+   <div id="toolbox">
+    <div class="tool">
+        <span>bit colour</span>
+        <input id="text-color-input" type="color" value="#A5C2A6" />
+      </div>
+      <div class="tool">
+        <span>background</span>
+        <input id="background-color-input" type="color" value="#D8DAD3" />
+      </div>
+      <div class="tool">
+        <span>render rate (in ms)</span>
+        <input id="speed-input" type="number" min="0" max="1000" value="50" size="1" />
+      </div>
+      <div class="tool">
+        <span># of columns</span>
+        <input id="column-count-input" type="number" min="0" max="100" value="50" size="4" />
+      </div>
+      <div class="tool">
+        <span>P(0)</span>
+        <input id="p0-input" type="range" min="0" max="1" step="0.05" value="0.3" />
+      </div>
+      <div class="tool">
+        <span>P(1)</span>
+        <input id="p1-input" type="range" min="0" max="1" step="0.05" value="0.3" />
+      </div>
+  </div>
+  
+  <!-- relating to my info + text -->
+  <div id="info">
+    <button id="toggleToolbox">☰</button>
+    <div class="personal-info">
+        <h2>Iva Tutiš</h2>
+        <p id="personal-description">
+            text here
+        </p>
+        <a href="https://www.linkedin.com/in/iva-tutis/" target="_blank">🚀 LinkedIn</a>
+        <br>
+        <a href="https://github.com/IvaTutis" target="_blank">🚀 GitHub</a>
+      </div>
+  </div>
 
-    <footer>
-        <p>© 2023 Development season. No rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="personal-info/inject-text.js"></script>
+  <script src="background/background-animation.js"></script>
+  <script src="background/background-animation-interactivity.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('toggleToolbox');
+        const toolbox = document.getElementById('toolbox');
+    
+        toggleButton.addEventListener('click', function() {
+            toolbox.classList.toggle('toolbox-visible');
+        });
+    });
+    </script>
 </body>
 
 </html>

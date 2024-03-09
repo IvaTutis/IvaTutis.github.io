@@ -1,0 +1,30 @@
+.tool {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .tool:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .tool > span {
+    margin: 0 1rem 0 0;
+    padding: 0;
+    flex: 1;
+  }
+
+  .tool > input {
+    width: 60px;
+    border-radius: 3px;
+  }
+
+  .tool > input[type="color"]{
+    border: none;
+    border-color: transparent;
+    -webkit-appearance: none;
+  }
+  
+  input::-webkit-color-swatch {
+    border: none;
+  }

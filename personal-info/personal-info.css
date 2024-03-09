@@ -1,0 +1,40 @@
+#info {
+    /* Higher than the scene's z-index to ensure it's on top */
+    z-index: 2;
+    /* centers the window on screen */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    /* shape and dye the square */
+    width: 50%;
+    height: 50vh;
+    border-radius: 32px;
+    /* Adjust the background color for slight transparency */
+    background-color: rgba(241, 242, 235, 0.7); /* slightly transparent */
+    color: #566246; 
+    }
+
+    .personal-info {
+        margin-bottom: 20px; 
+        margin: 0 0 10px; 
+    }
+
+    .personal-info h2 {
+        text-align: center;
+        color: #4A4A48; /* Lighter grey for contrast */
+    }
+
+    .personal-info p {
+        color: #4A4A48;
+    }
+
+    .personal-info a {
+        text-decoration: none; 
+        color: #4A4A48; 
+    }
+
+    .personal-info a:hover {
+        color: #00be53; /* Darker shade for hover state, adjust as needed */
+    }
