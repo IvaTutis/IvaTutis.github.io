@@ -9,25 +9,36 @@
     padding: 1rem;
     /* shape and dye the square */
     width: 50%;
-    height: 50vh;
+    height: auto;
     border-radius: 32px;
     /* Adjust the background color for slight transparency */
     background-color: rgba(241, 242, 235, 0.7); /* slightly transparent */
     color: #566246; 
+    /* content display */
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
     }
 
     .personal-info {
-        margin-bottom: 20px; 
-        margin: 0 0 10px; 
+        text-align: center;
+        margin: 0 0 2%;
     }
 
     .personal-info h2 {
-        text-align: center;
-        color: #4A4A48; /* Lighter grey for contrast */
+        color: #4A4A48;
     }
 
     .personal-info p {
-        color: #4A4A48;
+        text-align:start;
+        margin: 0 0 2%;
+    }
+
+    .personal-links {
+        display: flex; 
+        flex-direction: column; 
+        align-items:center; 
+        width: 100%;
     }
 
     .personal-info a {

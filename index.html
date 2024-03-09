@@ -4,50 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <title>About Iva</title>
+  <style> /* general style */
+    html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw; 
+    height: 100vh;
+    overflow: hidden; 
+    font-family: "Segoe UI", Arial, sans-serif;
+    }
+  </style>
   <link rel="stylesheet" href="background/background.css">
   <link rel="stylesheet" href="background/background-changer.css">
   <link rel="stylesheet" href="background/range-slider.css">
   <link rel="stylesheet" href="personal-info/personal-info.css">
-  <style>
-    #toggleToolbox {
-      position: fixed;
-        z-index: 3;
-        top: 20px;
-        left: 20px;
-        border: 1px solid #d4d7d6; /* Updated for clarity */
-        border-radius: 8px; /* Rounded corners */
-        background-color: #e6e6e6; /* Modern, flat design typically uses solid colors */
-        color: #333333; /* Dark gray for contrast */
-        padding: 2px 8px; /* Spacing inside the button */
-        cursor: pointer; /* Cursor changes to a hand icon when hovered */
-        font-size: 16px; /* Larger, more readable text */
-        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    }
-
-    #toggleToolbox:hover {
-        background-color: #f0f0f0; /* Slightly darker when hovered for feedback */
-    }
-
-    .toolbox-visible {
-        transform: translateX(140%);
-    }
-
-    #toolbox {
-        /* size */ 
-        width: 20%;
-        height: auto;
-        /* position when hidden */
-        position: fixed;
-        left: -30%; 
-        top: 2%;
-        transition: transform 1s cubic-bezier(0.42, 0, 0.58, 1);
-        /* shape & colour */
-        background-color: rgba(241, 242, 235, 0.8);
-        color: #566246;
-        padding: 1rem;
-        border-radius: 12px;
-    }
-  </style>
 </head>
 
 <body>
@@ -89,25 +59,18 @@
         <p id="personal-description">
             text here
         </p>
-        <a href="https://www.linkedin.com/in/iva-tutis/" target="_blank">🚀 LinkedIn</a>
-        <br>
-        <a href="https://github.com/IvaTutis" target="_blank">🚀 GitHub</a>
+        <div class="personal-links">
+            <a href="https://www.linkedin.com/in/iva-tutis/" target="_blank">🚀 LinkedIn</a>
+            <br>
+            <a href="https://github.com/IvaTutis" target="_blank">🚀 GitHub</a>
+        </div>
       </div>
   </div>
 
   <script src="personal-info/inject-text.js"></script>
   <script src="background/background-animation.js"></script>
   <script src="background/background-animation-interactivity.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const toggleButton = document.getElementById('toggleToolbox');
-        const toolbox = document.getElementById('toolbox');
-    
-        toggleButton.addEventListener('click', function() {
-            toolbox.classList.toggle('toolbox-visible');
-        });
-    });
-    </script>
+  <script src="background/background-changer.js"></script>
 </body>
 
 </html>
