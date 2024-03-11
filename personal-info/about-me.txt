@@ -1,17 +1,23 @@
 Hey there!
 <br/>
-I'm Iva, a mathematician that ended up working in software engineering. Couple of things you should know about me:
+I'm Iva, a mathematician that ended up working in software engineering. Couple of things about me:
 <br/> 
 1. I find it intrinsically reward to produce things for other people to use, be it software, tableware or art.
+Making things brings me into a state of flow, where I don't experience thoughts or time as normal, but instead
+my actions and conciousness seem to merge into one. I greatly enjoy this.
 <br/> 
-2. Problem solving brings a lot of dopamine into my ever-hungry system - especially when it involves collaboration.  
+2. Problem solving brings a lot of dopamine into my ever-hungry system. Without things to figure out, 
+life seems quite monotone in my eyes. I am considered a good, creative problem solver and have trained many years on this. 
+I'm no genious - I just really want to crack a problem. My favourite way to solve problems is conversational, be it 
+with another engineer, a chatbot or a rubber duck. 
+<br/>
+Unlike this text which is fairly open-ended and personable, my personality is pretty shy and quiet, albeit ambitious. 
+My personal interest - or rather, a thing I would like to do before I die - is uploading intelligence.
 <br/> 
-Currently I'm making things as being a (currently mid-level) software engineer by mostly working with .NET technologies. 
-I ask a lot of questions, enjoy architecting bigger systems and tinkering with my own side-projects. 
+Currently I create software as a (currently mid-level) software engineer, mostly working with .NET technologies,
+but my mind is somewhat technology agnostic as most systems seem to have similar patterns. 
 I aspire to be a person my mentors would have admired when they were juniors, and this internal type of motivation makes me
  a very relaxed, bright and hardworking person. 
-<br/>
-Unlike this text which is fairly open-ended and personable, my personality is ambitious, albeit pretty shy and quiet. 
-My personal interest - or rather, a thing I would like to do before I die - is uploading intelligence.
+ I ask a lot of questions, and enjoy challenges of architecting bigger systems and tinkering with my own side-projects. 
 <br/>
 You can contact me or check out my work at the platforms below: 
